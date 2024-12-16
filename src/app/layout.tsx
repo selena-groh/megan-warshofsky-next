@@ -1,7 +1,6 @@
-import React from "react";
 import { Analytics } from "@vercel/analytics/next";
+import React from "react";
 import { Providers } from "./providers";
-import { fonts } from "./fonts";
 
 export const metadata = {
   title: {
@@ -19,7 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={fonts.robotoSerif.variable}>
+    <html
+      lang="en"
+      // className={fonts.robotoSerif.variable}
+      suppressHydrationWarning
+    >
       <body>
         <Providers>{children}</Providers>
         <Analytics />
