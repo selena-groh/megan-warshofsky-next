@@ -1,4 +1,5 @@
 import Video from "@/components/Video";
+import VidstackVideo from "@/components/VidstackVideo";
 import "server-only";
 
 export default async function Page({
@@ -15,6 +16,10 @@ export default async function Page({
       </p>
       <br />
       <Video src="https://www.youtube.com/embed/uOaMqC8ymig" />
+      <VidstackVideo
+        title={`Alicia Keys & Maleah Joi Moon - Kaleidoscope ("Hell's Kitchen") (Music Video)`}
+        src="youtube/uOaMqC8ymig"
+      />
     </div>
   );
 }

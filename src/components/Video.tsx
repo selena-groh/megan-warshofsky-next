@@ -27,7 +27,7 @@ function Video({ src }) {
   });
 
   return (
-    <AspectRatio maxW="2000px" ratio={560 / 315}>
+    <AspectRatio maxW="2000px" ratio={16 / 9}>
       <iframe
         allowFullScreen
         src={srcWithPlayerParams.toString()}

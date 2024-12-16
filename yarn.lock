@@ -953,7 +953,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/dom@npm:1.6.12":
+"@floating-ui/dom@npm:1.6.12, @floating-ui/dom@npm:^1.6.10":
   version: 1.6.12
   resolution: "@floating-ui/dom@npm:1.6.12"
   dependencies:
@@ -2164,6 +2164,19 @@ __metadata:
     vue-router:
       optional: true
   checksum: 10c0/e79bb0bdf52c0fcdb78fcaec8c0bb827d926e6cce5e72277d86e1a030bf529a04ae2c0f5d679d910358970fa1dc7b086926305560732c201e0b8b12bfee822f9
+  languageName: node
+  linkType: hard
+
+"@vidstack/react@npm:^1.12.12":
+  version: 1.12.12
+  resolution: "@vidstack/react@npm:1.12.12"
+  dependencies:
+    "@floating-ui/dom": "npm:^1.6.10"
+    media-captions: "npm:^1.0.4"
+  peerDependencies:
+    "@types/react": ^18.0.0
+    react: ^18.0.0
+  checksum: 10c0/a4deed92f6805b0ba5867e61960e29cf0de0ae2b23b4db197f8d1fbd2fea254a93958cf00227d60272a5f36d6421e55f82e78aa7585c4a633ad8a6767f9b0246
   languageName: node
   linkType: hard
 
@@ -6860,6 +6873,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"media-captions@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "media-captions@npm:1.0.4"
+  checksum: 10c0/62c6df2909b748284e929fe3d169548b42b91ea79374f67f89a313aa529395b024d5be82056613f3e88ebb2e4a86464f6c6a8d569bc7bae2f5542baa350031ba
+  languageName: node
+  linkType: hard
+
 "megan-warshofsky-next@workspace:.":
   version: 0.0.0-use.local
   resolution: "megan-warshofsky-next@workspace:."
@@ -6877,6 +6897,7 @@ __metadata:
     "@types/react": "npm:19.0.1"
     "@typescript-eslint/typescript-estree": "npm:^8.18.0"
     "@vercel/analytics": "npm:^1.4.1"
+    "@vidstack/react": "npm:^1.12.12"
     add: "npm:^2.0.6"
     classnames: "npm:^2.5.1"
     eslint: "npm:^9.17.0"
