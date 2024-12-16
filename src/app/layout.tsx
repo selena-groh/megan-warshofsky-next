@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import React from "react";
+import { fonts } from "./fonts";
 import Providers from "./providers";
 
 export const metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      // className={fonts.robotoSerif.variable}
+      className={fonts.robotoSerif.variable}
       suppressHydrationWarning
     >
       <body>
