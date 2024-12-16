@@ -1,8 +1,14 @@
 "use client";
 
-import { Provider } from "@/components/ui/provider";
 import { system } from "@/theme/theme";
+import { ChakraProvider } from "@chakra-ui/react";
 
-export function Providers({ children }) {
-  return <Provider value={system}>{children}</Provider>;
+export default function Providers(props: { children: React.ReactNode }) {
+  return (
+    <ChakraProvider value={system}>
+      {/* <ThemeProvider attribute="class" disableTransitionOnChange> */}
+      {props.children}
+      {/* </ThemeProvider> */}
+    </ChakraProvider>
+  );
 }

@@ -1,19 +1,16 @@
 import { createSystem, defaultConfig } from "@chakra-ui/react";
 
-export const system = createSystem(
-  defaultConfig
-  // {
-  // theme: {
-  //   tokens: {
-  //     fonts: {
-  //       heading: { value: `'Roboto Serif', serif` },
-  //       body: { value: `'system-ui', sans-serif` },
-  //       mono: { value: `'Menlo', monospace` },
-  //     },
-  //   },
-  // },
-  // }
-);
+export const system = createSystem(defaultConfig, {
+  theme: {
+    tokens: {
+      fonts: {
+        heading: { value: `'Roboto Serif', serif` },
+        body: { value: `'system-ui', sans-serif` },
+        mono: { value: `'Menlo', monospace` },
+      },
+    },
+  },
+});
 
 // export const buttonTheme = defineStyleConfig({
 //   variants: {
