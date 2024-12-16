@@ -4,7 +4,7 @@ import { CloseButton } from "./close-button";
 
 interface DialogContentProps extends ChakraDialog.ContentProps {
   portalled?: boolean;
-  portalRef?: React.RefObject<HTMLElement | null>;
+  portalRef?: React.RefObject<HTMLElement>;
   backdrop?: boolean;
 }
 
@@ -21,7 +21,6 @@ export const DialogContent = React.forwardRef<
   } = props;
 
   return (
-    // @ts-expect-error This snippet comes from Chakra UI, and has a type error. Ignoring it.
     <Portal disabled={!portalled} container={portalRef}>
       {backdrop && <ChakraDialog.Backdrop />}
       <ChakraDialog.Positioner>

@@ -24,7 +24,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "type-check": "tsc"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
