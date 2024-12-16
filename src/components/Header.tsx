@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import NextLink from "next/link";
+import Link from "@/components/Link";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 const Header = () => {
   return (
@@ -25,9 +25,8 @@ const Header = () => {
         gap={{ base: "8px", lg: "32px" }}
         justify="flex-start"
       >
-        <Link as={NextLink} href="/">
-          Home
-        </Link>
+        <Link href="/">Projects</Link>
+        <Link href="/contact">Get in Touch</Link>
       </Flex>
     </Flex>
   );
