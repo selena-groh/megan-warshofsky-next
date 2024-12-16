@@ -6,7 +6,12 @@ const Layout = ({ children }) => {
   return (
     <Flex minHeight="100vh" flexDirection="column">
       <main>
-        <Container py={{ base: 8 }} px={4} maxWidth="1600px" margin="auto">
+        <Container
+          py={{ base: 8 }}
+          px={{ base: 4, md: 8 }}
+          maxWidth="1600px"
+          margin="auto"
+        >
           <Header />
           {children}
         </Container>

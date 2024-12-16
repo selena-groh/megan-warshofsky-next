@@ -1,3 +1,4 @@
+import Video from "@/components/Video";
 import "server-only";
 
 export default async function Page({
@@ -12,6 +13,8 @@ export default async function Page({
         Example page for individual project with slug &ldquo;{slug}&rdquo; goes
         here
       </p>
+      <br />
+      <Video src="https://www.youtube.com/embed/uOaMqC8ymig" />
     </div>
   );
 }
