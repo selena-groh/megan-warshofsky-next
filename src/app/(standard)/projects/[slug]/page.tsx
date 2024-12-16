@@ -8,7 +8,10 @@ export default async function Page({
   const slug = (await params).slug;
   return (
     <div>
-      <p>Example page for individual project with slug "{slug}" goes here</p>
+      <p>
+        Example page for individual project with slug &ldquo;{slug}&rdquo; goes
+        here
+      </p>
     </div>
   );
 }
