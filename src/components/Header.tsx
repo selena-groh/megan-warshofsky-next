@@ -1,5 +1,5 @@
 import Link from "@/components/Link";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 
 const Header = () => {
   return (
@@ -13,11 +13,11 @@ const Header = () => {
       textAlign={{ base: "center", lg: "left" }}
     >
       <div>
-        <Box display="flex" gap="2px">
+        <Link href="/">
           <Heading as="h1" size="2xl" mb="8px">
             Megan Warshofsky
           </Heading>
-        </Box>
+        </Link>
         <Text color="gray.600">TODO add subline</Text>
       </div>
       <Flex
