@@ -11,6 +11,7 @@ A personal website
 - [Vercel](https://vercel.com/)
 - [React](https://reactjs.org/)
 - [Chakra UI](https://chakra-ui.com/)
+- [Vidstack](https://vidstack.io/)
 
 ## Local Development
 

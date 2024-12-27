@@ -11,7 +11,7 @@ export default async function Page() {
       <Heading as="h1" size="2xl" mb="24px" textAlign="center">
         Projects will go here
       </Heading>
-      {projects.map((project) => (
+      {projects?.map((project) => (
         <Link href={`/projects/${project.slug}`} key={project.sys.id}>
           {project.name}
         </Link>

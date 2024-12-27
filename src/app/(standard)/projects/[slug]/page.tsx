@@ -1,4 +1,5 @@
 import Video from "@/components/Video";
+import VidstackVideo from "@/components/VidstackVideo";
 import { getProject } from "@/services/contentful_api";
 import { Heading } from "@chakra-ui/react";
 import { notFound } from "next/navigation";
@@ -22,6 +23,10 @@ export default async function Page({
         {project.name}
       </Heading>
       <Video src="https://www.youtube.com/embed/uOaMqC8ymig" />
+      <VidstackVideo
+        title={`Alicia Keys & Maleah Joi Moon - Kaleidoscope ("Hell's Kitchen") (Music Video)`}
+        src="youtube/uOaMqC8ymig"
+      />
     </div>
   );
 }
