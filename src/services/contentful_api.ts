@@ -4,38 +4,14 @@ const {
   CONTENTFUL_PREVIEW_ACCESS_TOKEN,
 } = process.env;
 
-// Set a variable that contains all the fields needed for projects when a fetch for
-// content is performed
+// All the fields needed for projects when content is fetched
 const PROJECT_GRAPHQL_FIELDS = `
   sys {
     id
   }
   name
+  slug
 `;
-
-// title
-// slug
-// summary
-// details {
-//   json
-//   links {
-//     assets {
-//       block {
-//         sys {
-//           id
-//         }
-//         url
-//         description
-//       }
-//     }
-//   }
-// }
-// date
-// authorName
-// categoryName
-// projectImage {
-//   url
-// }
 
 async function fetchGraphQL(query, preview = false) {
   return fetch(
@@ -63,22 +39,13 @@ function extractProjectEntries(fetchResponse) {
 }
 
 export async function getAllProjects(
-  // For this demo set the default limit to always return 3 projects.
-  limit = 3,
+  // Default limit is 24
+  limit = 24,
   // By default this function will return published content but will provide an option to
   // return draft content for reviewing projects before they are live
   isDraftMode = false
 ) {
   const projects = await fetchGraphQL(
-    // `query {
-    //     projectCollection(where:{slug_exists: true}, order: date_DESC, limit: ${limit}, preview: ${
-    //       isDraftMode ? "true" : "false"
-    //     }) {
-    //       items {
-    //         ${PROJECT_GRAPHQL_FIELDS}
-    //       }
-    //     }
-    //   }`,
     `query {
         projectCollection(limit: ${limit}, preview: ${
           isDraftMode ? "true" : "false"
@@ -95,17 +62,8 @@ export async function getAllProjects(
 
 export async function getProject(slug, isDraftMode = false) {
   const project = await fetchGraphQL(
-    // `query {
-    //     projectCollection(where:{slug: "${slug}"}, limit: 1, preview: ${
-    //       isDraftMode ? "true" : "false"
-    //     }) {
-    //       items {
-    //         ${PROJECT_GRAPHQL_FIELDS}
-    //       }
-    //     }
-    //   }`,
     `query {
-        projectCollection(limit: 1, preview: ${
+        projectCollection(where:{slug: "${slug}"}, limit: 1, preview: ${
           isDraftMode ? "true" : "false"
         }) {
           items {
