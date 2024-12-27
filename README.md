@@ -25,6 +25,7 @@ This application requires Contentful secrets. Get the Contentful Space ID and Ac
 ```
 CONTENTFUL_SPACE_ID=space_id_here
 CONTENTFUL_ACCESS_TOKEN=access_token_here
+CONTENTFUL_PREVIEW_ACCESS_TOKEN=preview_access_token_here
 ```
 
 Finally, run the following to get the application running locally:
