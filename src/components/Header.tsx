@@ -25,7 +25,8 @@ const Header = () => {
         gap={{ base: "8px", lg: "32px" }}
         justify="flex-start"
       >
-        <Link href="/contact">About</Link>
+        <Link href="/">Projects</Link>
+        <Link href="/about">About</Link>
       </Flex>
     </Flex>
   );
