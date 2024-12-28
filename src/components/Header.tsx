@@ -14,8 +14,8 @@ const Header = () => {
     >
       <div>
         <Link href="/">
-          <Heading as="h1" size="2xl" mb="8px">
-            Megan Warshofsky
+          <Heading as="h1" size="4xl" mb="8px" color="#254d32">
+            megan warshofsky
           </Heading>
         </Link>
         <Text color="gray.600">TODO add subline</Text>
@@ -25,7 +25,7 @@ const Header = () => {
         gap={{ base: "8px", lg: "32px" }}
         justify="flex-start"
       >
-        <Link href="/contact">Get in Touch</Link>
+        <Link href="/contact">About</Link>
       </Flex>
     </Flex>
   );

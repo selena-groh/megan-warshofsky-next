@@ -7,9 +7,17 @@ import {
 import "@vidstack/react/player/styles/default/layouts/video.css";
 import "@vidstack/react/player/styles/default/theme.css";
 
-function VidstackVideo({ title, src }: { title: string; src: string }) {
+function VidstackVideo({
+  title,
+  src, // "youtube/uOaMqC8ymig"
+  aspectRatio = "16/9",
+}: {
+  title: string;
+  src: string;
+  aspectRatio: string;
+}) {
   return (
-    <MediaPlayer title={title} src={src} aspectRatio="16/9">
+    <MediaPlayer title={title} src={src} aspectRatio={aspectRatio}>
       <MediaProvider />
       <DefaultVideoLayout
         // thumbnails TODO add these

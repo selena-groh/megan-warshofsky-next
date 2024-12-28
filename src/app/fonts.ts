@@ -1,4 +1,4 @@
-import { Roboto, Roboto_Serif } from "next/font/google";
+import { Roboto, Parkinsans } from "next/font/google";
 
 export const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -6,7 +6,7 @@ export const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-export const robotoSerif = Roboto_Serif({
+export const parkinsans = Parkinsans({
   subsets: ["latin"],
-  variable: "--font-roboto-serif",
+  variable: "--font-parkinsans",
 });
