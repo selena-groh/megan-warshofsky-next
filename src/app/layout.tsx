@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import cx from "classnames";
 import React from "react";
-import { roboto, robotoSerif } from "./fonts";
+import { roboto, parkinsans } from "./fonts";
 import Providers from "./providers";
 
 export const metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(robotoSerif.variable, roboto.variable)}
+      className={cx(parkinsans.variable, roboto.variable)}
       suppressHydrationWarning
     >
       <body>

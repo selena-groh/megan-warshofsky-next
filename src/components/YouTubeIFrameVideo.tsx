@@ -19,7 +19,14 @@ const addSearchParams = (
   );
 };
 
-function Video({ src }) {
+function YouTubeIFrameVideo({
+  videoId,
+  aspectRatio = 16 / 9,
+}: {
+  videoId: string;
+  aspectRatio: number;
+}) {
+  const src = `https://www.youtube.com/embed/${videoId}`;
   const srcWithPlayerParams = addSearchParams(src, {
     color: "white",
     iv_load_policy: "3",
@@ -27,7 +34,7 @@ function Video({ src }) {
   });
 
   return (
-    <AspectRatio maxW="2000px" ratio={16 / 9}>
+    <AspectRatio maxW="2000px" ratio={aspectRatio}>
       <iframe
         allowFullScreen
         src={srcWithPlayerParams.toString()}
@@ -39,4 +46,4 @@ function Video({ src }) {
   );
 }
 
-export default Video;
+export default YouTubeIFrameVideo;

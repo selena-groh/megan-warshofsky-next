@@ -4,7 +4,7 @@ export const system = createSystem(defaultConfig, {
   theme: {
     tokens: {
       fonts: {
-        heading: { value: `'Roboto', sans-serif` },
+        heading: { value: `'Parkinsans', sans-serif` },
         body: { value: `'Roboto', sans-serif` },
       },
     },

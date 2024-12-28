@@ -5,12 +5,48 @@ const {
 } = process.env;
 
 // All the fields needed for projects when content is fetched
-const PROJECT_GRAPHQL_FIELDS = `
+const ALL_PROJECTS_GRAPHQL_FIELDS = `
   sys {
     id
   }
   name
   slug
+  coverImage {
+    url
+    width
+    height
+  }
+`;
+
+const SINGLE_PROJECT_GRAPHQL_FIELDS = `
+  sys {
+    id
+  }
+  name
+  slug
+  coverImage {
+    url
+    width
+    height
+  }
+  mainMedia {
+    sys {
+      id
+    }
+  }
+  description {
+    json
+    links {
+      assets {
+        block {
+          sys {
+            id
+          }
+          url
+        }
+      }
+    }
+  }
 `;
 
 async function fetchGraphQL(query, preview = false) {
@@ -51,7 +87,7 @@ export async function getAllProjects(
           isDraftMode ? "true" : "false"
         }) {
           items {
-            ${PROJECT_GRAPHQL_FIELDS}
+            ${ALL_PROJECTS_GRAPHQL_FIELDS}
           }
         }
       }`,
@@ -67,7 +103,7 @@ export async function getProject(slug, isDraftMode = false) {
           isDraftMode ? "true" : "false"
         }) {
           items {
-            ${PROJECT_GRAPHQL_FIELDS}
+            ${SINGLE_PROJECT_GRAPHQL_FIELDS}
           }
         }
       }`,
