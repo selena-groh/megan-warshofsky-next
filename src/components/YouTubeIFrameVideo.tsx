@@ -19,6 +19,9 @@ const addSearchParams = (
   );
 };
 
+const MAX_HEIGHT = 900;
+const MAX_WIDTH = 2000;
+
 function YouTubeIFrameVideo({
   videoId,
   aspectRatio = 16 / 9,
@@ -33,8 +36,18 @@ function YouTubeIFrameVideo({
     rel: "0",
   });
 
+  // Max width is 2000 unless the max width needs to be smaller in order to not exceed the max height
+  const maxWidthBasedOnMaxHeight = Math.min(
+    MAX_WIDTH,
+    aspectRatio * MAX_HEIGHT
+  );
+
   return (
-    <AspectRatio maxW="2000px" ratio={aspectRatio}>
+    <AspectRatio
+      maxW={`${maxWidthBasedOnMaxHeight}px`}
+      margin="auto"
+      ratio={aspectRatio}
+    >
       <iframe
         allowFullScreen
         src={srcWithPlayerParams.toString()}
