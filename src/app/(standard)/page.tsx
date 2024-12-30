@@ -23,10 +23,15 @@ export default async function Page() {
       <Box
         display="grid"
         gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }}
-        gap="32px"
+        gap={{ base: "16px", md: "32px" }}
       >
         {bucketedProjects.map((bucket, index) => (
-          <Box key={index} display="flex" flexDirection="column" gap="32px">
+          <Box
+            key={index}
+            display="flex"
+            flexDirection="column"
+            gap={{ base: "16px", md: "32px" }}
+          >
             {bucket?.map((project) => (
               <ProjectImage project={project} key={project.sys.id} />
             ))}

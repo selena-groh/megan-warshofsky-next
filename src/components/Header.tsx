@@ -24,6 +24,7 @@ const Header = () => {
         direction={["column", "row"]}
         gap={{ base: "8px", lg: "32px" }}
         justify="flex-start"
+        align="center"
       >
         <Link href="/">Projects</Link>
         <Link href="/about">About</Link>
